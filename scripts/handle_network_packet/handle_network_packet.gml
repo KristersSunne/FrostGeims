@@ -81,7 +81,7 @@ function handle_connect_packet(_packet){
 		buffer_delete(_name_buffer);
 		
 		if(!ds_map_exists(instances,_player_id)){
-			var _new_player = instance_create_depth(irandom(room_width),irandom(room_height),0,oPlayer);
+			var _new_player = instance_create_depth(0,0,0,oPlayer);
 			_new_player.player_id = _player_id;
 			_new_player.player_name = _player_name;
 			
