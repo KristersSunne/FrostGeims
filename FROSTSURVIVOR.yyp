@@ -39,6 +39,7 @@
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"connect_to_server","path":"scripts/connect_to_server/connect_to_server.yy",},},
     {"id":{"name":"handle_network_packet","path":"scripts/handle_network_packet/handle_network_packet.yy",},},
+    {"id":{"name":"send_disconnect_packet","path":"scripts/send_disconnect_packet/send_disconnect_packet.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",

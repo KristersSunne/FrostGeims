@@ -1,0 +1,17 @@
+// Main step event
+if(global.client_id == player_id){
+	var _input_left = keyboard_check(ord("A"));
+	var _input_right = keyboard_check(ord("D"));
+	var _input_up = keyboard_check(ord("W"));
+	var _input_down = keyboard_check(ord("S"));
+
+	var _hsp = _input_right - _input_left;
+	var _vsp = _input_down - _input_up;
+
+	x += _hsp*4;
+	y += _vsp*4;
+	
+	if(_hsp != 0 || _vsp != 0){
+		send_movement_packet();
+	}
+}
