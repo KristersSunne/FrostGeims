@@ -1,6 +1,13 @@
 player_id = 0;
 player_name = "";
 
+wSpeed = 10;
+cSpeed = 3;
+pSpeed = 0;
+speedIncrement = 0.2;
+
+isCrouching = false;
+
 function send_movement_packet(){
 	// Create a buffer to send a movement packet
 	var _buff = buffer_create(32, buffer_grow, 1);

@@ -16,13 +16,14 @@ window_set_size(1280, 720);
 
 var _display_width = display_get_width();
 var _display_height = display_get_height();
+
 window_set_position(_display_width/2 - 1280/2, _display_height/2 - 720/2);
 
-surface_resize(application_surface, RES_W, RES_H);
+surface_resize(application_surface, RES_W , RES_H);
 
 display_set_gui_size(RES_W, RES_H);
 
 shakePower = 5;
 shakeValue = 0;
+_follow_Distance = 10;
 
-instance_create_depth(x,y,0,oLighting);

@@ -4,9 +4,12 @@ var targetY = -1;
 if(instance_exists(obj_follow)){
 	var _dist = point_distance(obj_follow.x,obj_follow.y,mouse_x,mouse_y);
 	var _direction = point_direction(obj_follow.x,obj_follow.y,mouse_x,mouse_y);
-
-	var real_x = obj_follow.x + lengthdir_x(_dist/10,_direction);
-	var real_y = obj_follow.y + lengthdir_y(_dist/10,_direction);
+	
+	var real_x = obj_follow.x + lengthdir_x(_dist/_follow_Distance,_direction);
+	var real_y = obj_follow.y + lengthdir_y(_dist/_follow_Distance,_direction);
+	
+	//var real_x = obj_follow.x; 
+	//var real_y = obj_follow.y;
 
 	targetX = real_x-camera_w/2;
 	targetY = real_y-camera_h/2;
