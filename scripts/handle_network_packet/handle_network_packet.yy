@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"handle_network_packet",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Network",
+    "path":"folders/Scripts/Network.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

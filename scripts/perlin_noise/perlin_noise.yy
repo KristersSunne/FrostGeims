@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"send_disconnect_packet",
+  "%Name":"perlin_noise",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"send_disconnect_packet",
+  "name":"perlin_noise",
   "parent":{
-    "name":"Network",
-    "path":"folders/Scripts/Network.yy",
+    "name":"WorldGen",
+    "path":"folders/Scripts/WorldGen.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

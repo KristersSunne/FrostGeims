@@ -85,6 +85,10 @@ function handle_connect_packet(_packet){
 			_new_player.player_id = _player_id;
 			_new_player.player_name = _player_name;
 			
+			if(_player_id == global.client_id){
+				oCamera.obj_follow = _new_player;
+			}
+			
 			// Player gets added to the instances
 			ds_map_add(instances,_player_id, _new_player);
 		}

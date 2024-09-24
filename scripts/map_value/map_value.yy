@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"send_disconnect_packet",
+  "%Name":"map_value",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"send_disconnect_packet",
+  "name":"map_value",
   "parent":{
-    "name":"Network",
-    "path":"folders/Scripts/Network.yy",
+    "name":"General",
+    "path":"folders/Scripts/General.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

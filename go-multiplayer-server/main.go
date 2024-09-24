@@ -25,6 +25,16 @@ type Client struct {
 	LastSeen time.Time
 	X        uint16
 	Y        uint16
+	Stats    Stats
+}
+
+type Stats struct {
+	Health      float32
+	Stamina     float32
+	Sleep       float32
+	Water       float32
+	Hunger      float32
+	Temperature float32
 }
 
 var clients = make(map[string]*Client)
@@ -101,6 +111,14 @@ func handleConnect(addr *net.UDPAddr, conn *net.UDPConn, data []byte) {
 		Name:     clientName,
 		Address:  addr,
 		LastSeen: time.Now(),
+		Stats: Stats{
+			Health:      100.0,
+			Stamina:     100.0,
+			Sleep:       100.0,
+			Water:       100.0,
+			Hunger:      100.0,
+			Temperature: 37.0, // (CELSIUS)
+		},
 	}
 
 	clients[clientKey] = newClient

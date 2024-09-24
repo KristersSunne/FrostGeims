@@ -7,9 +7,11 @@ if(global.client_id == player_id){
 
 	var _hsp = _input_right - _input_left;
 	var _vsp = _input_down - _input_up;
-
-	x += _hsp*4;
-	y += _vsp*4;
+	
+	if (_hsp != 0) and (_vsp != 0) { _hsp *= 0.707107; _vsp *= 0.707107; }
+	
+	x += _hsp*10;
+	y += _vsp*10;
 	
 	if(_hsp != 0 || _vsp != 0){
 		send_movement_packet();
