@@ -34,6 +34,8 @@ function handle_data_packet(_packet){
 	// Get the data action
 	var _action_type = buffer_read(_packet, buffer_u8);
 	
+	show_debug_message("Data packet received");
+	
 	switch(_action_type){
 		// The movement sync
 		case ACTION.MOVE:
@@ -61,6 +63,8 @@ function handle_connect_packet(_packet){
 	
 	if(global.client_id == -1){
 		global.client_id = _received_id;
+		
+		send_udp_handshake(udp_client,server_ip,udp_server_port);
 	} 
 	
 	var _num_clients = buffer_read(_packet, buffer_u16);
