@@ -37,10 +37,10 @@ void main()
 
     // Apply a stronger falloff for lights: Modulate brightness based on distance from center
     // This line is crucial: The `pow` function allows you to control the falloff curve.
-    light_brightness = pow(light_brightness, 3.0);  // Higher exponent = more focused lights
+    light_brightness = pow(light_brightness, 2.0);  // Higher exponent = more focused lights
 
     // Blend the light with the base color based on the adjusted brightness
-    out_col = mix(out_col, base_col * normalize(lights_col + 0.05) * 3.0, light_brightness);
+    out_col = mix(out_col, base_col * normalize(lights_col + 0.05) * 2.0, light_brightness);
 
     // Output the final color
     gl_FragColor = vec4(out_col, 1.0);

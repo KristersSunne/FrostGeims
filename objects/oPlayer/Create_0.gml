@@ -23,7 +23,7 @@ function send_movement_packet(){
 	buffer_write(_buff, buffer_u16, y); // Player's Y coordinate
 
 	// Send the packet to the server via UDP
-	network_send_udp_raw(oNetwork.client, oNetwork.server_ip, oNetwork.server_port, _buff, buffer_tell(_buff));
+	network_send_udp_raw(oNetwork.udp_client, oNetwork.server_ip, oNetwork.udp_server_port, _buff, buffer_tell(_buff));
 
 	// Clean up the buffer after sending
 	buffer_delete(_buff);

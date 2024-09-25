@@ -8,7 +8,7 @@ function send_disconnect_packet() {
     buffer_write(_buff, buffer_u16, global.client_id); // Player ID
 
     // Send the disconnect packet to the server
-    network_send_udp_raw(oNetwork.client, oNetwork.server_ip, oNetwork.server_port, _buff, buffer_tell(_buff));
+    network_send_raw(oNetwork.tcp_client, _buff, buffer_tell(_buff));
 
     // Clean up the buffer after sending
     buffer_delete(_buff);

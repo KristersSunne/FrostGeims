@@ -1,4 +1,4 @@
-col = c_red;
+col = c_blue;
 radius = 500;
 twitch = 0;
 
